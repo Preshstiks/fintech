@@ -18,12 +18,17 @@ const Hero = ({ selectedTab, setSelectedTab }) => {
         color="white"
         pt="70px"
         pb="150px"
-        display="flex"
-        alignItems="center"
+        display={{ base: "block", xxmd: "flex" }}
+        flexDirection={{ base: "column", xxmd: "row" }}
+        alignItems={{ base: "align-start", xxmd: "center" }}
         justifyContent="space-between"
       >
-        <Box>
-          <Text fontFamily="semibold" fontSize={35}>
+        <Box mb={{ base: "60px" }}>
+          <Text
+            fontFamily="semibold"
+            mb={{ base: "10px", md: "0" }}
+            fontSize={35}
+          >
             Welcome Back, Precious
           </Text>
           <Text fontFamily="light" fontSize={14}>
@@ -35,8 +40,9 @@ const Hero = ({ selectedTab, setSelectedTab }) => {
           borderColor="#3c649f"
           display="flex"
           fontSize={14}
+          justifyContent={{ base: "space-between", xxmd: "start" }}
           fontFamily="regular"
-          gap={10}
+          gap={{ base: 0, xxmd: 10 }}
         >
           <Text
             onClick={() => handleTabSelect(0)}
@@ -89,6 +95,7 @@ const Hero = ({ selectedTab, setSelectedTab }) => {
             Settings
           </Text>
           <Text
+            display={{ base: "none", sm: "block" }}
             onClick={() => handleTabSelect(5)}
             borderBottom={selectedTab === 5 ? "2px" : "none"}
             cursor="pointer"
@@ -99,6 +106,7 @@ const Hero = ({ selectedTab, setSelectedTab }) => {
             Help
           </Text>
           <Text
+            display={{ base: "none", sm: "block" }}
             onClick={() => handleTabSelect(6)}
             borderBottom={selectedTab === 6 ? "2px" : "none"}
             cursor="pointer"

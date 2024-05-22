@@ -3,6 +3,7 @@ import { GoDotFill, GoMail } from "react-icons/go";
 import { FiBell } from "react-icons/fi";
 import Avatar from "../assets/profile_pic.jpeg";
 import { CiSearch } from "react-icons/ci";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 
 const Navbar = () => {
   return (
@@ -11,7 +12,12 @@ const Navbar = () => {
         <Text fontFamily="bold" fontSize={25}>
           WealthWave
         </Text>
-        <Box fontFamily="regular" fontSize={14} display="flex" gap="7">
+        <Box
+          fontFamily="regular"
+          fontSize={14}
+          display={{ base: "none", md: "flex" }}
+          gap="7"
+        >
           <Text cursor="pointer" color="gold.color">
             Dashboard
           </Text>
@@ -19,7 +25,12 @@ const Navbar = () => {
           <Text cursor="pointer">Transactions</Text>
           <Text cursor="pointer">Wallet</Text>
         </Box>
-        <Box width="20%" position="relative">
+        <Box
+          width="20%"
+          position="relative"
+          // display={["none", "none", "block"]}
+          display={{ base: "none", xmd: "block" }}
+        >
           <Input
             backgroundColor="opaque.color"
             maxWidth="500px"
@@ -41,7 +52,7 @@ const Navbar = () => {
             <CiSearch size={20} />
           </Box>
         </Box>
-        <Box display="flex" alignItems="center" gap={7}>
+        <Box display={{ base: "none", md: "flex" }} alignItems="center" gap={7}>
           <Box position="relative">
             <GoMail size={20} cursor="pointer" />
             <GoDotFill color="red" className="dot" />
@@ -66,6 +77,9 @@ const Navbar = () => {
               borderRadius="100%"
             />
           </Box>
+        </Box>
+        <Box display={{ base: "block", md: "none" }}>
+          <HiOutlineMenuAlt1 size={25} />
         </Box>
       </Box>
     </Box>

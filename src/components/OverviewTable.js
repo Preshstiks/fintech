@@ -1,4 +1,6 @@
 import {
+  Box,
+  Image,
   Table,
   TableContainer,
   Tbody,
@@ -8,7 +10,8 @@ import {
   Thead,
   Tr,
 } from "@chakra-ui/react";
-
+import Figma from "../assets/icons/figma.png";
+import Spotify from "../assets/icons/spotify_3669986.png";
 const OverviewTable = () => {
   return (
     <TableContainer
@@ -40,7 +43,18 @@ const OverviewTable = () => {
         </Thead>
         <Tbody>
           <Tr>
-            <Td>Figma</Td>
+            <Td fontSize="15px" fontWeight="medium">
+              <Text display="flex" alignItems="center" gap={2}>
+                <Box padding={2} bgColor="gray.100" borderRadius="100%">
+                  <Image
+                    src={Figma}
+                    style={{ width: "15px", height: "15px" }}
+                    alt="figma"
+                  />
+                </Box>
+                Figma
+              </Text>
+            </Td>
             <Td>Subscription</Td>
             <Td>July 11.07.2023</Td>
             <Td>$624,000.00</Td>
@@ -58,7 +72,19 @@ const OverviewTable = () => {
             </Td>
           </Tr>
           <Tr>
-            <Td>Spotify</Td>
+            <Td>
+              {" "}
+              <Text display="flex" alignItems="center" gap={2}>
+                <Box padding={2} bgColor="gray.100" borderRadius="100%">
+                  <Image
+                    src={Spotify}
+                    style={{ width: "15px", height: "15px" }}
+                    alt="figma"
+                  />
+                </Box>
+                Spotify
+              </Text>
+            </Td>
             <Td>Receive</Td>
             <Td>July 12.07.2023</Td>
             <Td>$624,000.00</Td>

@@ -8,6 +8,16 @@ const theme = extendTheme({
     medium: `'Poppins-medium', sans-serif`,
     light: `'Poppins-light', sans-serif`,
   },
+  breakpoints: {
+    base: "0em",
+    sm: "30em",
+    md: "48em",
+    xmd: "58em",
+    xxmd: "60.9rem",
+    lg: "62em",
+    xl: "80em",
+    "2xl": "96em",
+  },
   colors: {
     gold: {
       color: "#D5A226",

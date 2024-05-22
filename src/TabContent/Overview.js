@@ -1,4 +1,4 @@
-import { Box, Card, Image, Text } from "@chakra-ui/react";
+import { Box, Card, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import { BiSolidWalletAlt } from "react-icons/bi";
 import Icon from "../assets/chart.png";
 import { FaSackDollar } from "react-icons/fa6";
@@ -8,8 +8,8 @@ import RadialChart from "../components/RadialChart";
 import OverviewTable from "../components/OverviewTable";
 const Overview = () => {
   return (
-    <Box px="5%" pb="40px">
-      <Box display="grid" gridTemplateColumns="repeat(3, 1fr)" gap={5}>
+    <Box px={{ base: "5%", md: "5%" }} pb="40px">
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={5}>
         <Card
           w="100%"
           borderRadius="12px"
@@ -151,16 +151,18 @@ const Overview = () => {
             <Image src={Icon} height={50} width={50} />
           </Box>
         </Card>
-        <Box gridColumnStart={1} gridColumnEnd={3}>
-          <ChartComponent />
-        </Box>
-        <Box gridColumnStart={3} gridColumnEnd={4} h="100%">
+      </SimpleGrid>
+      <Box
+        mt="20px"
+        display={{ base: "block", md: "grid" }}
+        gridTemplateColumns={{ md: "1fr 1fr" }}
+        gap={5}
+      >
+        <ChartComponent />
+        <Box mt={{ base: "20px", md: "0" }}>
           <RadialChart />
         </Box>
       </Box>
-      {/* <Box pt="40px" display="flex" justifyContent="space-between"> */}
-
-      {/* </Box> */}
       <OverviewTable />
     </Box>
   );
