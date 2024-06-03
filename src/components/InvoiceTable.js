@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import Figma from "../assets/icons/figma.png";
 import Spotify from "../assets/icons/spotify_3669986.png";
-const OverviewTable = () => {
+const InvoiceTable = () => {
   return (
     <TableContainer
       bgColor="white"
@@ -25,7 +25,7 @@ const OverviewTable = () => {
         <Thead bgColor="#F8F8FA">
           <Tr>
             <Th color="gray.500" fontSize="13px">
-              Company Name
+              Client Name
             </Th>
             <Th color="gray.500" fontSize="13px">
               Type
@@ -37,7 +37,7 @@ const OverviewTable = () => {
               Amount
             </Th>
             <Th color="gray.500" fontSize="13px">
-              Employee Status
+              Payment Status
             </Th>
           </Tr>
         </Thead>
@@ -138,4 +138,4 @@ const OverviewTable = () => {
   );
 };
 
-export default OverviewTable;
+export default InvoiceTable;

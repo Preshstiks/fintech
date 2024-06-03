@@ -6,6 +6,7 @@ import { ImUpload2 } from "react-icons/im";
 import ChartComponent from "../components/Chart";
 import RadialChart from "../components/RadialChart";
 import OverviewTable from "../components/OverviewTable";
+import ChartIcon from "../assets/icons/chartIcon.png";
 const Overview = () => {
   return (
     <Box px={{ base: "5%", md: "5%" }} pb="40px">
@@ -54,7 +55,15 @@ const Overview = () => {
                 +16% Last Year
               </Text>
             </Box>
-            <Image src={Icon} height={50} width={50} />
+            <Image
+              src={ChartIcon}
+              style={{
+                height: "80px",
+                width: "80px",
+              }}
+              height={60}
+              width={60}
+            />
           </Box>
         </Card>
         <Card
@@ -101,7 +110,15 @@ const Overview = () => {
                 +12% Last Month
               </Text>
             </Box>
-            <Image src={Icon} height={50} width={50} />
+            <Image
+              src={ChartIcon}
+              style={{
+                height: "80px",
+                width: "80px",
+              }}
+              height={60}
+              width={60}
+            />
           </Box>
         </Card>
         <Card
@@ -148,7 +165,15 @@ const Overview = () => {
                 -10% Last Year
               </Text>
             </Box>
-            <Image src={Icon} height={50} width={50} />
+            <Image
+              src={ChartIcon}
+              style={{
+                height: "80px",
+                width: "80px",
+              }}
+              height={60}
+              width={60}
+            />
           </Box>
         </Card>
       </SimpleGrid>
