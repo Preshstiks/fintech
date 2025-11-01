@@ -1,13 +1,19 @@
-import { Box, Card, Image, Progress, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Card,
+  Image,
+  SimpleGrid,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import { BsThreeDots } from "react-icons/bs";
-import RadialChart from "../components/RadialChart";
-import OverviewTable from "../components/OverviewTable";
 import MasterCard from "../assets/icons/logo_14062982.png";
 import { IoIosArrowDown } from "react-icons/io";
 import WalletChart from "../components/WalletChart";
 import WalletTable from "../components/WalletTable";
 
 const Wallet = () => {
+  const nameColor = useBreakpointValue({ base: "gray.800", sm: "white" });
   return (
     <Box px={{ base: "5%", md: "5%" }} pb="40px">
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} mt={5} spacing={5}>
@@ -76,6 +82,7 @@ const Wallet = () => {
           bgColor="rgba(255, 255, 255, 0.1)"
           boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
           backdropFilter="blur(10px)"
+          pb={2}
         >
           <Box
             display="flex"
@@ -88,7 +95,12 @@ const Wallet = () => {
               <Text fontSize="12px" color="gray.500">
                 Name
               </Text>
-              <Text fontWeight="semibold" pb={1} color="white" fontSize="18px">
+              <Text
+                fontWeight="semibold"
+                pb={1}
+                color={{ base: "gray.800", md: "white" }}
+                fontSize="18px"
+              >
                 Jim Smith
               </Text>
             </Box>
@@ -96,7 +108,12 @@ const Wallet = () => {
               <Text fontSize="12px" color="gray.500">
                 Number
               </Text>
-              <Text fontWeight="semibold" pb={1} color="white" fontSize="18px">
+              <Text
+                fontWeight="semibold"
+                pb={1}
+                color={{ base: "gray.800", md: "white" }}
+                fontSize="18px"
+              >
                 **** **** **** 5532
               </Text>
             </Box>
@@ -106,7 +123,7 @@ const Wallet = () => {
             bgColor="white"
             height="50%"
             borderBottomRadius="12px"
-            pt={5}
+            py={5}
             px={6}
             display="flex"
           >
@@ -134,6 +151,7 @@ const Wallet = () => {
           bgColor="rgba(255, 255, 255, 0.1)"
           boxShadow="0 4px 30px rgba(0, 0, 0, 0.1)"
           backdropFilter="blur(10px)"
+          pb={6}
         >
           <Box
             display="flex"
@@ -146,7 +164,12 @@ const Wallet = () => {
               <Text fontSize="12px" color="gray.500">
                 Name
               </Text>
-              <Text fontWeight="semibold" pb={1} color="white" fontSize="18px">
+              <Text
+                fontWeight="semibold"
+                pb={1}
+                color={nameColor}
+                fontSize="18px"
+              >
                 Ryan Daniels
               </Text>
             </Box>
@@ -154,7 +177,12 @@ const Wallet = () => {
               <Text fontSize="12px" color="gray.500">
                 Number
               </Text>
-              <Text fontWeight="semibold" pb={1} color="white" fontSize="18px">
+              <Text
+                fontWeight="semibold"
+                pb={1}
+                color={{ base: "gray.800", md: "white" }}
+                fontSize="18px"
+              >
                 **** **** **** 3106
               </Text>
             </Box>

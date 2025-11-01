@@ -12,12 +12,13 @@ const Hero = ({ selectedTab, setSelectedTab }) => {
   const handleTabSelect = (index) => {
     setSelectedTab(index);
   };
+
   return (
     <Box bgColor="blue.color" px="5%">
       <Box
         color="white"
         pt="70px"
-        pb="150px"
+        pb={selectedTab === 5 ? "80px" : "150px"}
         display={{ base: "block", xxmd: "flex" }}
         flexDirection={{ base: "column", xxmd: "row" }}
         alignItems={{ base: "align-start", xxmd: "center" }}
