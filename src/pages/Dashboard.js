@@ -6,9 +6,9 @@ import Overview from "../TabContent/Overview";
 import Wallet from "../TabContent/Wallet";
 import Invoice from "../TabContent/Invoice";
 import Profile from "../TabContent/Profile";
-import Settings from "../TabContent/Setting";
 import Help from "../TabContent/Help";
 import Report from "../TabContent/Report";
+import Payment from "../TabContent/Payment";
 
 const Dashboard = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -22,8 +22,8 @@ const Dashboard = () => {
             {selectedTab === 0 && <Overview />}
             {selectedTab === 1 && <Wallet />}
             {selectedTab === 2 && <Invoice />}
-            {selectedTab === 3 && <Profile />}
-            {selectedTab === 4 && <Settings />}
+            {selectedTab === 3 && <Payment />}
+            {selectedTab === 4 && <Profile />}
             {selectedTab === 5 && <Help />}
             {selectedTab === 6 && <Report />}
           </Box>

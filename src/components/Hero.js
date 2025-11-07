@@ -1,12 +1,4 @@
 import { Box, Text } from "@chakra-ui/react";
-import { useState } from "react";
-import Overview from "../TabContent/Overview";
-import Wallet from "../TabContent/Wallet";
-import Invoice from "../TabContent/Invoice";
-import Profile from "../TabContent/Profile";
-import Settings from "../TabContent/Setting";
-import Help from "../TabContent/Help";
-import Report from "../TabContent/Report";
 
 const Hero = ({ selectedTab, setSelectedTab }) => {
   const handleTabSelect = (index) => {
@@ -83,7 +75,7 @@ const Hero = ({ selectedTab, setSelectedTab }) => {
             color={selectedTab === 3 ? "gold.color" : "white"}
             borderColor={selectedTab === 3 ? "gold.color" : "white"}
           >
-            Profile
+            Payment
           </Text>
           <Text
             onClick={() => handleTabSelect(4)}
@@ -93,8 +85,9 @@ const Hero = ({ selectedTab, setSelectedTab }) => {
             color={selectedTab === 4 ? "gold.color" : "white"}
             borderColor={selectedTab === 4 ? "gold.color" : "white"}
           >
-            Settings
+            Profile
           </Text>
+
           <Text
             display={{ base: "none", sm: "block" }}
             onClick={() => handleTabSelect(5)}
